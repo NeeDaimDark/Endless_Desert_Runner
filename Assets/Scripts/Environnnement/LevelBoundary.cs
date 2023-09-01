@@ -14,6 +14,7 @@ public class LevelBoundary : MonoBehaviour
     {
         
     }
+    //here we define map boundary
 
     // Update is called once per frame
     void Update()
