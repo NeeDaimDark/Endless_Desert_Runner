@@ -356,6 +356,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Collect table/CollectableControl.cs"
 "Assets/Scripts/Collect table/CollectCoin.cs"
+"Assets/Scripts/Collect table/LevelDistance.cs"
 "Assets/Scripts/Collect table/RotateObject.cs"
 "Assets/Scripts/Environnnement/GenerateLevel.cs"
 "Assets/Scripts/Environnnement/LevelBoundary.cs"
