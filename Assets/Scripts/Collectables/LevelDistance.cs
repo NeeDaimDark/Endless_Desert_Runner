@@ -8,6 +8,7 @@ using Unity.VisualScripting;
 public class LevelDistance : MonoBehaviour
 {
     public TextMeshProUGUI distanceCountDisplay;
+    public TextMeshProUGUI distanceEndDisplay;
     public static int distanceCountInt = 0;
     public static bool addingDistance=false;
     public float disDelay=0.35f;
@@ -34,6 +35,7 @@ public class LevelDistance : MonoBehaviour
     {
         distanceCountInt++;
         distanceCountDisplay.SetText("" + distanceCountInt.ToString());
+        distanceEndDisplay.SetText("" + distanceCountInt.ToString());
         yield return new WaitForSeconds(disDelay);
         addingDistance = false;
     }

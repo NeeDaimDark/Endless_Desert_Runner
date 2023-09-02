@@ -9,7 +9,7 @@ public class ObstacleCollision : MonoBehaviour
     public GameObject characterModel;
     public AudioSource crushThud;
     public GameObject mainCamera;
-
+    public GameObject levelControl; 
     void OnTriggerEnter(Collider other)
     {
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
@@ -23,5 +23,6 @@ public class ObstacleCollision : MonoBehaviour
         //play sound of falling 
         crushThud.Play();
         mainCamera.GetComponent<Animator>().enabled = true;
+        levelControl.GetComponent<EndRun>().enabled = true;
     }
 }

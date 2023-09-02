@@ -7,6 +7,7 @@ using TMPro;
 public class CollectableControl : MonoBehaviour
 {
     public TextMeshProUGUI coinCountDisplay;
+    public TextMeshProUGUI coinEndDisplay;
     public static int coinCountInt = 0;
     
     // Start is called before the first frame update
@@ -17,5 +18,6 @@ public class CollectableControl : MonoBehaviour
     {
         //display coins collected
         coinCountDisplay.SetText("" + coinCountInt.ToString());
+        coinEndDisplay.SetText("" + coinCountInt.ToString());
     }
 }
