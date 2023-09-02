@@ -9,19 +9,23 @@ public class LevelDistance : MonoBehaviour
 {
     public TextMeshProUGUI distanceCountDisplay;
     public static int distanceCountInt = 0;
-    public bool addingDistance=false;
+    public static bool addingDistance=false;
     public float disDelay=0.35f;
     // Start is called before the first frame update
   
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         //check if tistance is not added and add distance every 0.35 seceonds 
-        if(addingDistance==false)
+        if (addingDistance == false)
         {
-            addingDistance = true;
-            StartCoroutine(AddingDis());
+            if (PlayerMovement.canMove)
+            {
+                addingDistance = true;
+                StartCoroutine(AddingDis());
+
+            }
         }
     }
     
