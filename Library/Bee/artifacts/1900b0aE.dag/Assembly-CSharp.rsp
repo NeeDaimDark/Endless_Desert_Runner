@@ -363,6 +363,7 @@
 "Assets/Scripts/Environnnement/LevelBoundary.cs"
 "Assets/Scripts/Environnnement/LevelStarter.cs"
 "Assets/Scripts/Environnnement/ObstacleCollision.cs"
+"Assets/Scripts/MainMenu/MainMenu.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
