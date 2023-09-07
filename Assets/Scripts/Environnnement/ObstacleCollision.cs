@@ -14,15 +14,16 @@ public class ObstacleCollision : MonoBehaviour
     {
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
         //if we collde with obstacle the player stop moving forward 
-        thePlayer.GetComponent<PlayerMovement>().enabled = false;
+        thePlayer.GetComponent<PlayerMovement2>().enabled = false;
         //these bool wer set false the distance add can stop when the player crushes with an obstacle
         LevelDistance.addingDistance = false;
-        PlayerMovement.canMove = false;
+        PlayerMovement2.canMove = false;
         //play animation of falling
         characterModel.GetComponent<Animator>().Play("Stumble Backwards");
         //play sound of falling 
         crushThud.Play();
         mainCamera.GetComponent<Animator>().enabled = true;
+        //activer le script EndRun
         levelControl.GetComponent<EndRun>().enabled = true;
     }
 }

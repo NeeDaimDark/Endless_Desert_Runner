@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float moveSpeed = 5;
-    public float leftRightSpeed = 4;
+    public float moveSpeed = 6;
+    public float leftRightSpeed = 4.5f;
     static public bool canMove = false;
     public bool isJumping = false;
     public bool comingDown = false;
     public GameObject playerObject;
-
+    public Joystick joyStick;
     void Start()
     {
         
@@ -58,7 +58,8 @@ public class PlayerMovement : MonoBehaviour
             }
             if (comingDown == true)
             {
-                transform.Translate(Vector3.up * Time.deltaTime * -7, Space.World);
+                transform.Translate(Vector3.up * Time.deltaTime * -7f, Space.World);
+              
             }
         }
 
@@ -71,5 +72,9 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
         comingDown = false;
         playerObject.GetComponent<Animator>().Play("Standard Run");
+        yield return new WaitForSeconds(2);
+        Vector3 newPosition = transform.position;
+        newPosition.y = 1.5f;
+        transform.position = newPosition;
     }
 }

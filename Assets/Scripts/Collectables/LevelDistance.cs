@@ -21,7 +21,7 @@ public class LevelDistance : MonoBehaviour
         //check if tistance is not added and add distance every 0.35 seceonds 
         if (addingDistance == false)
         {
-            if (PlayerMovement.canMove)
+            if (PlayerMovement2.canMove)
             {
                 addingDistance = true;
                 StartCoroutine(AddingDis());

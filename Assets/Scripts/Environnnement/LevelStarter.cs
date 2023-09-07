@@ -45,7 +45,7 @@ public class LevelStarter : MonoBehaviour
         yield return new WaitForSeconds(1);
         goFX.Play();
         //set the movement of player active when the game starts after the animations and sound effect of ready and go 
-        PlayerMovement.canMove = true;
+        PlayerMovement2.canMove = true;
 
     }
 }
