@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float moveSpeed = 6;
-    public float leftRightSpeed = 4.5f;
+    public float moveSpeed = 5;
+    public float maxSpeed = 15f;
+    public float leftRightSpeed = 5;
     static public bool canMove = false;
+
     public bool isJumping = false;
     public bool comingDown = false;
     public GameObject playerObject;
@@ -19,11 +21,21 @@ public class PlayerMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   //the player moves always forward
+
+    {
+        //if (moveSpeed < maxSpeed)
+        //{
+        //    Debug.Log("+0.5");
+        //    moveSpeed +=0.05f*Time.deltaTime;
+        //}
+        //the player moves always forward
+        Debug.Log(moveSpeed);
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.World);
         if (canMove == true)
-
-        {  //if we press left arrow or Q we move right and it can't surpass the map left boundary
+             
+        {
+           
+                //if we press left arrow or Q we move right and it can't surpass the map left boundary
             if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow))
             {
                 if (this.gameObject.transform.position.x > LevelBoundary.leftSide)
@@ -49,17 +61,21 @@ public class PlayerMovement : MonoBehaviour
                     
                 }
             }
-        }
-        if(isJumping == true)
-        {
-           if( comingDown == false)
+       
+        
+            if(isJumping == true)
+        
             {
+               if( comingDown == false)
+               {
                 transform.Translate(Vector3.up * Time.deltaTime * 7,Space.World);
-            }
-            if (comingDown == true)
-            {
+               }
+               if (comingDown == true)
+               {
                 transform.Translate(Vector3.up * Time.deltaTime * -7f, Space.World);
               
+                }
+        
             }
         }
 
@@ -77,4 +93,5 @@ public class PlayerMovement : MonoBehaviour
         newPosition.y = 1.5f;
         transform.position = newPosition;
     }
+
 }

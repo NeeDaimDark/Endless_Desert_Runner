@@ -8,6 +8,7 @@ public class PlayerMovement2 : MonoBehaviour
 {
     // Start is called before the first frame update
     public float moveSpeed = 6;
+    public float maxSpeed = 15;
     public float leftRightSpeed = 4.5f;
     static public bool canMove = false;
     public bool isJumping = false;
@@ -58,6 +59,7 @@ public class PlayerMovement2 : MonoBehaviour
 
         // }
         float horizontalInput = joyStick.Horizontal;
+    
 
         // The player moves always forward
         transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed, Space.World);
@@ -124,5 +126,10 @@ public class PlayerMovement2 : MonoBehaviour
         Vector3 newPosition = transform.position;
         newPosition.y = 1.5f;
         transform.position = newPosition;
+        if (moveSpeed < maxSpeed)
+        {
+            moveSpeed = moveSpeed + 0.05f;
+        }
     }
+  
 }

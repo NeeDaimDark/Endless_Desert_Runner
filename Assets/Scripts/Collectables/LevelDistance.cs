@@ -9,9 +9,14 @@ public class LevelDistance : MonoBehaviour
 {
     public TextMeshProUGUI distanceCountDisplay;
     public TextMeshProUGUI distanceEndDisplay;
-    public static int distanceCountInt = 0;
+    public TextMeshProUGUI highDistanceDisplay;
+    //public TextMeshProUGUI highDistanceEndisplay;
+    public  int distanceCountInt ;
+    public  int highDistanceInt ;
     public static bool addingDistance=false;
     public float disDelay=0.35f;
+    public bool scoreCounting;
+  
     // Start is called before the first frame update
   
 
@@ -33,9 +38,22 @@ public class LevelDistance : MonoBehaviour
     //this method count distance runned and display it every 0.35 second 
     IEnumerator AddingDis()
     {
-        distanceCountInt++;
+        if (scoreCounting)
+        {
+            distanceCountInt++;
+            if (distanceCountInt > highDistanceInt)
+            {
+                highDistanceInt = distanceCountInt;
+            }
+        }
         distanceCountDisplay.SetText("" + distanceCountInt.ToString());
+ 
+
         distanceEndDisplay.SetText("" + distanceCountInt.ToString());
+        highDistanceDisplay.SetText("" + highDistanceInt.ToString());
+
+
+
         yield return new WaitForSeconds(disDelay);
         addingDistance = false;
     }

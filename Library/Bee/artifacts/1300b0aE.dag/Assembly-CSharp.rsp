@@ -368,6 +368,7 @@
 "Assets/Scripts/Environnnement/Destroyer.cs"
 "Assets/Scripts/Environnnement/EndRun.cs"
 "Assets/Scripts/Environnnement/GenerateLevel.cs"
+"Assets/Scripts/Environnnement/HighScore.cs"
 "Assets/Scripts/Environnnement/LevelBoundary.cs"
 "Assets/Scripts/Environnnement/LevelStarter.cs"
 "Assets/Scripts/Environnnement/ObstacleCollision.cs"
