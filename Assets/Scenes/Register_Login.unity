@@ -287,7 +287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -475, y: -14.938812}
+  m_AnchoredPosition: {x: -475, y: -14.938843}
   m_SizeDelta: {x: -1320.7739, y: -319.1773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70500917
@@ -2604,7 +2604,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1097329163}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1954558310}
+        m_TargetAssemblyTypeName: RegisterScript, Assembly-CSharp
+        m_MethodName: RegisterUser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1097329163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2922,7 +2934,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1149474510}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1954558311}
+        m_TargetAssemblyTypeName: Login, Assembly-CSharp
+        m_MethodName: LoginUser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1149474510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4213,7 +4237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 471.5907, y: -14.938812}
+  m_AnchoredPosition: {x: 471.5907, y: -14.938843}
   m_SizeDelta: {x: -1320.7739, y: -319.1773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746030303
@@ -4462,7 +4486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: -1
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4857,6 +4881,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1954558309}
+  - component: {fileID: 1954558310}
+  - component: {fileID: 1954558311}
   m_Layer: 0
   m_Name: LoginRegisterManagaer
   m_TagString: Untagged
@@ -4879,6 +4905,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1954558310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954558308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac83075498677494b9fdbccd7484af4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usernameInput: {fileID: 1835106164}
+  emailInput: {fileID: 1865904088}
+  passwordInput: {fileID: 876035048}
+  UserId: 
+--- !u!114 &1954558311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954558308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d5fb409ae6407419dcd9751fdf4bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emailInput: {fileID: 2010661735}
+  passwordInput: {fileID: 1675865171}
 --- !u!1 &1977797201
 GameObject:
   m_ObjectHideFlags: 0
